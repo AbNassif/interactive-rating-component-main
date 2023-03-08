@@ -1,0 +1,158 @@
+@font-face {
+  font-family: Overpass;
+  src: url("../font/Overpass-VariableFont_wght.ttf");
+}
+
+/***********************************************
+               TABLE OF CONTENTS
+************************************************
+1.DEFAULTS
+2.
+***********************************************/
+
+/***********************************************
+                 1.DEFAULTS
+***********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass";
+}
+
+:root {
+  /* BACKGROUND COLORS */
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+  /* FONT SIZES */
+  --paragraph: 15px;
+}
+
+body {
+  background-color: var(--veryDarkBlue);
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+button,
+li {
+  cursor: pointer;
+  transition: 0.5s;
+}
+/***********************************************
+                   2.MAIN
+***********************************************/
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 410px;
+  background: radial-gradient(circle at 50% 0%, #252c36 0%, #171e28 100%);
+  border-radius: 30px;
+  padding: 32px;
+}
+
+.logo {
+  border-radius: 50%;
+  background-color: #272e38;
+  padding: 15px;
+  height: 47px;
+  width: 47px;
+}
+
+main h1 {
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+main button {
+  background-color: var(--orange);
+  border: none;
+  color: white;
+  height: 42px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+main button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+main p {
+  font-size: var(--paragraph);
+  color: var(--lightGrey);
+  line-height: 1.4rem;
+}
+
+main ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  padding: 1.2rem 1rem 1rem;
+  background-color: #272e38;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--lightGrey);
+}
+
+ul li:hover {
+  background-color: var(--orange);
+  color: white;
+}
+
+li.selectedRating {
+  background-color: var(--lightGrey);
+  color: white;
+}
+
+@media only screen and (max-width: 430px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  .attribution {
+    font-size: 14px;
+  }
+}
+
+.attribution {
+  color: var(--white);
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--orange);
+}
